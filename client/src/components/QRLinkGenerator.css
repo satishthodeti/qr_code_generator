@@ -1,0 +1,131 @@
+/* Container */
+.qr-container {
+  width: 100%;
+  padding: 40px;
+  background: #f9fafb;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: box-shadow 0.3s ease;
+  display: grid;
+  justify-items: center;
+}
+
+.qr-container:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Input */
+.qr-input {
+  min-height: 35px;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+
+.qr-input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+/* Generate Button */
+.qr-generate-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #4f46e5;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 15px;
+}
+
+.qr-generate-btn:hover {
+  background-color: #4338ca;
+}
+
+/* Result Section */
+.qr-result {
+  margin-top: 30px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.qr-result img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.qr-result p {
+  font-size: 15px;
+  color: #374151;
+  word-break: break-all;
+  margin-top: 8px;
+}
+
+/* Actions */
+.qr-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.qr-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #10b981;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.qr-btn:hover {
+  background-color: #059669;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .qr-container {
+    padding: 25px 20px;
+  }
+
+  .qr-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .qr-btn,
+  .qr-generate-btn {
+    width: 100%;
+  }
+
+  .qr-result img {
+    width: 160px;
+    height: 160px;
+  }
+}
